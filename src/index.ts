@@ -3,6 +3,7 @@ import Discord, { Message } from "discord.js";
 import { DISCORD_TOKEN } from './config/secrets';
 import CommandHandler from './commandHandler';
 import config from './config/botConfig';
+import axios from 'axios';
 
 const PORT = process.env.PORT || 5000;
 

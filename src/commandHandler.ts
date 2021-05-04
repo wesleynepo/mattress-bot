@@ -1,6 +1,7 @@
 import { Message } from "discord.js";
-import { GreetCommand, TimeCommand } from "./commands";
+import { CodeReviewCommand, GreetCommand, TimeCommand } from "./commands";
 import Command from "./commands/commandInterface";
+import { TaskCommand } from "./commands/task";
 import { CommandParser } from "./models/commandParser";
 
 export default class CommandHandler {
@@ -13,7 +14,9 @@ export default class CommandHandler {
 
     const commandClasses = [
       GreetCommand,
-      TimeCommand
+      TimeCommand,
+      CodeReviewCommand,
+      TaskCommand
     ];
 
     this.commands = commandClasses.map(commandClass => new commandClass());
@@ -26,7 +29,7 @@ export default class CommandHandler {
       return;
     }
 
-    message.reply(`Hive Greeter recieved '${this.echoMessage(message)}' from ${message.author.tag}`);
+    // message.reply(`Hive Greeter recieved '${this.echoMessage(message)}' from ${message.author.tag}`);
 
     const commandParser = new CommandParser(message, this.prefix);
 
