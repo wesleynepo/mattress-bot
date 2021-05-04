@@ -36,7 +36,7 @@ const createEmbedFromResponse = (task: any): MessageEmbed => {
         {name: 'Tipo', value: data.fields.issuetype.name},
         {name: 'Sprint', value: data.fields.customfield_10020[0]?.name || 'Indefinida' },
         {name: 'Desenvolvedor', value: data.fields.assignee.displayName || 'Não definido' },
-        {name: 'Revisor', value: data.fields.customfield_10088?.displayName || 'Não revisado' },
+        {name: 'Revisor', value: data.fields.customfield_10088[0]?.displayName || 'Não revisado' },
         {name: 'Tester', value: data.fields.customfield_10104?.displayName || 'Não testado' }
 
     )
