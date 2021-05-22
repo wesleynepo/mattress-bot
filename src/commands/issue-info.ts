@@ -1,8 +1,8 @@
-import Command from './commandInterface'
+import { Command } from './protocols'
 import { Message, MessageEmbed } from 'discord.js'
 import axios, { AxiosResponse } from 'axios'
 
-export class TaskCommand implements Command {
+export class IssueInfoCommand implements Command {
   commandNames = ['task', 'issue'];
 
   help(commandPrefix: string): string {
