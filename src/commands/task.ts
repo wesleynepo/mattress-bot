@@ -1,12 +1,12 @@
-import Command from "./commandInterface";
-import { Message, MessageEmbed } from "discord.js";
-import axios from "axios";
+import Command from "./commandInterface"
+import { Message, MessageEmbed } from "discord.js"
+import axios, { AxiosResponse } from "axios"
 
 export class TaskCommand implements Command {
   commandNames = ["task", "issue"];
 
   help(commandPrefix: string): string {
-    return `Use ${commandPrefix}to receive the task info.`;
+    return `Use ${commandPrefix}to receive the task info.`
   }
 
   async run(message: Message): Promise<void> {
@@ -15,15 +15,15 @@ export class TaskCommand implements Command {
         'headers': { 'Authorization': `Basic ${process.env.JIRA_TOKEN}` }
     })
 
-    await message.reply(createEmbedFromResponse(task));
+    await message.reply(createEmbedFromResponse(task))
   }
 }
 
 
-const createEmbedFromResponse = (task: any): MessageEmbed => {
+const createEmbedFromResponse = (task: AxiosResponse): MessageEmbed => {
     const data = task.data
     const embed: MessageEmbed = new MessageEmbed()
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    const randomColor = Math.floor(Math.random()*16777215).toString(16)
     
     embed.setTitle(data.key)
     embed.setColor(randomColor)

@@ -1,6 +1,6 @@
-import { Message } from "discord.js";
-import CommandHandler from "../../../commandHandler";
-import env from "../env";
+import { Message } from "discord.js"
+import CommandHandler from "../../../commandHandler"
+import env from "../env"
 
 const commandHandler = new CommandHandler(env.prefix)
 

@@ -1,5 +1,5 @@
-import app from "./config/app";
-import env from "./config/env";
+import app from "./config/app"
+import env from "./config/env"
 import client from './config/client'
 
 client.login(env.token).then()

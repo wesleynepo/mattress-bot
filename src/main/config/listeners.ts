@@ -1,4 +1,4 @@
-import { Client } from "discord.js";
+import { Client } from "discord.js"
 import messageListener from './listeners/command-listener'
 
 export default (client:Client):void => {
