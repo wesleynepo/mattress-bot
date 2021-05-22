@@ -1,8 +1,8 @@
-import { Message } from "discord.js"
-import { CodeReviewCommand, GreetCommand, TimeCommand } from "./commands"
-import Command from "./commands/commandInterface"
-import { TaskCommand } from "./commands/task"
-import { CommandParser } from "./models/commandParser"
+import { Message } from 'discord.js'
+import { CodeReviewCommand, GreetCommand, TimeCommand } from './commands'
+import Command from './commands/commandInterface'
+import { TaskCommand } from './commands/task'
+import { CommandParser } from './models/commandParser'
 
 export default class CommandHandler {
 
@@ -46,7 +46,7 @@ export default class CommandHandler {
 
   /** Sends back the message content after removing the prefix. */
   echoMessage(message: Message): string {
-    return message.content.replace(this.prefix, "").trim()
+    return message.content.replace(this.prefix, '').trim()
   }
 
   /** Determines whether or not a message is a user command. */

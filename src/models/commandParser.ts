@@ -1,4 +1,4 @@
-import { Message } from "discord.js"
+import { Message } from 'discord.js'
 
 /** A user-given command extracted from a message. */
 export class CommandParser {
@@ -12,7 +12,7 @@ export class CommandParser {
 
     this.commandPrefix = prefix
     const splitMessage = message.content.slice(prefix.length).trim().split(/ +/g)
-    const commandName = splitMessage.shift() || ""
+    const commandName = splitMessage.shift() || ''
     this.parsedCommandName = commandName.toLowerCase()
     this.args = splitMessage
     this.originalMessage = message

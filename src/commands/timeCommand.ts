@@ -1,8 +1,8 @@
-import Command from "./commandInterface"
-import { Message } from "discord.js"
+import Command from './commandInterface'
+import { Message } from 'discord.js'
 
 export class TimeCommand implements Command {
-  commandNames = ["time"];
+  commandNames = ['time'];
 
   help(commandPrefix: string): string {
     return `Use ${commandPrefix}time to current time.`

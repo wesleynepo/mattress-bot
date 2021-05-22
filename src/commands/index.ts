@@ -11,6 +11,6 @@
  * DO NOT export command classes using default
  */
 
-export * from "./greetCommand"
-export * from "./timeCommand"
-export * from "./codeReviews"
+export * from './greetCommand'
+export * from './timeCommand'
+export * from './codeReviews'

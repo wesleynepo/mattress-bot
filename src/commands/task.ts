@@ -1,9 +1,9 @@
-import Command from "./commandInterface"
-import { Message, MessageEmbed } from "discord.js"
-import axios, { AxiosResponse } from "axios"
+import Command from './commandInterface'
+import { Message, MessageEmbed } from 'discord.js'
+import axios, { AxiosResponse } from 'axios'
 
 export class TaskCommand implements Command {
-  commandNames = ["task", "issue"];
+  commandNames = ['task', 'issue'];
 
   help(commandPrefix: string): string {
     return `Use ${commandPrefix}to receive the task info.`
