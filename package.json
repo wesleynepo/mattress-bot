@@ -1,13 +1,13 @@
 {
-  "name": "hive-greeter",
+  "name": "mattress-bot",
   "version": "1.0.0",
-  "description": "Discord bot written in Typescript and discord.js hosted on Heroku",
+  "description": "A clean architecture discord bot wannabe.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
     "prestart:dev": "npm run build",
-    "start:dev": "nodemon build/index.js",
+    "start:dev": "nodemon build/main/server.js",
     "prebuild": "rimraf ./build",
     "build": "tsc",
     "prestart": "npm run build",
