@@ -5,10 +5,6 @@ import axios, { AxiosResponse } from 'axios'
 export class IssueInfoCommand implements Command {
   commandNames = ['task', 'issue'];
 
-  help(commandPrefix: string): string {
-    return `Use ${commandPrefix}to receive the task info.`
-  }
-
   async run(message: Message): Promise<void> {
     const issueID = message.content.replace('>issue ', '')
     const task = await axios.get(`https://gazinlabs.atlassian.net/rest/api/3/issue/${issueID}`, {
