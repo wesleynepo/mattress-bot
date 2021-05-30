@@ -1,5 +1,13 @@
 import { Message } from 'discord.js'
-import { CodeReviewCommand, IssueInfoCommand, NotFoundCommand } from './commands'
+import { 
+  CodeReviewCommand, 
+  IssueInfoCommand, 
+  NotFoundCommand, 
+  IssueWorklogCommand, 
+  JiraCommand, 
+  RandomReviewCommand, 
+  SaveUserTokenCommand 
+  } from './commands'
 import { Command } from './commands/protocols'
 import { CommandParser } from './models/command-parser'
 
@@ -11,7 +19,11 @@ export class CommandHandler {
 
     const commandClasses = [
       IssueInfoCommand,
-      CodeReviewCommand
+      CodeReviewCommand,
+      SaveUserTokenCommand,
+      JiraCommand,
+      IssueWorklogCommand,
+      RandomReviewCommand
     ]
     this.commandParser = commandParser
     this.commands = commandClasses.map(commandClass => new commandClass())
