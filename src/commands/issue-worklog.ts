@@ -27,7 +27,7 @@ export class IssueWorklogCommand implements Command {
     }     
 
     axios.post(`https://gazinlabs.atlassian.net/rest/api/3/issue/${issue}/worklog`, content, {
-      'headers': { 'Authorization': `Basic ${process.env.JIRA_TOKEN}` }}).catch(error => console.log(error))
+      'headers': { 'Authorization': `Basic ${user.JiraToken}` }}).catch(error => console.log(error))
 
     message.reply(`Worklog to ${messageArray[3]} with time ${timeSpent}`)
   } 
